@@ -1,7 +1,17 @@
 .landing-page-wrapper
-  h1
-    color: $roman-orange
-  p
-    color: $givry-white
+  h1, p
+    color: #ffffff
 
+  img
+    width: 60%
+
+@media screen and (max-width: 767px)
+  .landing-page-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    img
+      width: 70%
+    p
+      text-align: center
 

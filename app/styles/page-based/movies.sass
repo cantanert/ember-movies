@@ -1,0 +1,49 @@
+.movies-page-wrapper
+  .search-wrapper
+    display: flex
+    width: 100%
+    justify-content: space-between
+    padding: 20px 0
+    .search-input
+      padding: 0 15px
+      width: 73%
+      font-size: 25px
+    .search-submit
+      width: 25%
+  .popular-films-wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .film-card
+      width: 23%
+      margin-bottom: 30px
+    span
+      font-weight: 700
+    img
+      width: 100%
+    .overview-wrapper
+      .title
+        font-weight: 700
+      .overview
+        height: 100px
+        overflow: auto
+
+@media screen and (max-width: $width-small-max)
+  .movies-page-wrapper
+    .popular-films-wrapper
+      .film-card
+        width: 100%
+@media screen and (min-width: $width-medium-min) and (max-width: $width-medium-max)
+  .movies-page-wrapper
+    .popular-films-wrapper
+      .film-card
+        width: 47%
+
+@media screen and (min-width: $width-large-min) and (max-width: $width-large-max)
+  .movies-page-wrapper
+    .popular-films-wrapper
+      .film-card
+        width: 30%
+
+@media screen and (min-width: $width-xlarge-min)
+
