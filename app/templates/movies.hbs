@@ -5,9 +5,11 @@
     <Input type="text" class="search-input" @value={{this.searchInputValue}} placeholder="Search for a movie, tv show, person..." />
     <button class="search-submit" {{on "click" (fn this.sendRequest)}}>Search</button>
   </div>
-  {{#each this.searcResults as |movie|}}
-    <p>{{movie.title}}</p>
-  {{/each}}
+  <div class="search-results-wrapper">
+    {{#each this.searcResults as |movie|}}
+      <SearchResultItem @movie={{movie}} />
+    {{/each}}
+  </div>
 
   <h1 class="popular-films-title">Popular Films</h1>
   <div class="popular-films-wrapper">

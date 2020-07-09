@@ -10,6 +10,37 @@
       font-size: 25px
     .search-submit
       width: 25%
+  .search-results-wrapper
+    .search-result-item
+      display: flex
+      width: 100%
+      border: 1px solid $light-blue
+      border-radius: 2px
+      margin-bottom: 20px
+      .item-image,.item-detail
+        padding: 10px 15px
+        display: flex
+      .item-image
+        display: flex
+        align-items: center
+        flex: 1
+        img
+          width: 100%
+      .item-detail
+        flex: 3
+        flex-direction: column
+        justify-content: center
+        .title
+          margin-bottom: 0
+        .vote-average
+          margin-bottom: 0
+          span
+            font-weight: 700
+        .overview-wrapper
+          .title
+            font-weight: 700
+            margin-bottom: 5px
+
   .popular-films-wrapper
     display: flex
     flex-wrap: wrap

@@ -1,0 +1,13 @@
+<div class="search-result-item">
+  <div class="item-image">
+    <img src='https://image.tmdb.org/t/p/original{{if @movie.backdrop_path @movie.backdrop_path @movie.poster_path}}'>
+  </div>
+  <div class="item-detail">
+    <h3 class="title">{{@movie.title}}</h3>
+    <p class="vote-average"><span>Vote Average</span> {{@movie.vote_average}}</p>
+    <div class="overview-wrapper">
+      <p class="title">Overview</p>
+      <div class="overview">{{@movie.overview}}</div>
+    </div>
+  </div>
+</div>
