@@ -1,9 +1,14 @@
+
 <div class="movies-page-wrapper">
   <h1 class="search-title">Movies</h1>
   <div class="search-wrapper">
-    <input type="text" class="search-input" placeholder="Search for a movie, tv show, person...">
-    <button class="search-submit">Search</button>
+    <Input type="text" class="search-input" @value={{this.searchInputValue}} placeholder="Search for a movie, tv show, person..." />
+    <button class="search-submit" {{on "click" (fn this.sendRequest)}}>Search</button>
   </div>
+  {{#each this.searcResults as |movie|}}
+    <p>{{movie.title}}</p>
+  {{/each}}
+
   <h1 class="popular-films-title">Popular Films</h1>
   <div class="popular-films-wrapper">
     {{#each this.model as |movie|}}
