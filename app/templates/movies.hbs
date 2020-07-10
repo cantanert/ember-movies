@@ -3,7 +3,7 @@
   <h1 class="search-title">Movies</h1>
   <div class="search-wrapper">
     <Input type="text" class="search-input" @value={{this.searchInputValue}} placeholder="Search for a movie, tv show, person..." />
-    <button class="search-submit" {{on "click" (fn this.sendRequest)}}>Search</button>
+    <button class="search-submit" {{on "click" (fn this.getMovies)}}>Search</button>
   </div>
   <div class="search-results-wrapper">
     {{#each this.searcResults as |movie|}}

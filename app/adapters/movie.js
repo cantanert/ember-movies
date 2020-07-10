@@ -1,8 +1,9 @@
 import RESTAdapter from '@ember-data/adapter/rest';
+import moviesStaticData from '../statics/movies/movies-static-data';
 
 export default class MovieAdapter extends RESTAdapter {
-  host = 'https://api.themoviedb.org/3'
+  host = moviesStaticData.movieApiHost;
   pathForType(){
-    return 'movie/popular?api_key=70535229d2cd7b8e7129bbdd05eac118'
+    return moviesStaticData.popularMoviePath + '?api_key=' + moviesStaticData.apiKey
   }
 }

@@ -1,6 +1,6 @@
 <div class="search-result-item">
   <div class="item-image">
-    <img src='https://image.tmdb.org/t/p/original{{if @movie.backdrop_path @movie.backdrop_path @movie.poster_path}}'>
+    <img src={{@movie.image}}>
   </div>
   <div class="item-detail">
     <h3 class="title">{{@movie.title}}</h3>
